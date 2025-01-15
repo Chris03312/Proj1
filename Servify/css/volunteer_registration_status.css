@@ -1,0 +1,116 @@
+.timeline {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding: 20px 0;
+  }
+  .timeline:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    right: 5%;
+    height: 20px;
+    background-color: #ddd;
+    z-index: 1;
+    transform: translateY(-50%);
+  }
+  .timeline-item {
+    position: relative;
+    text-align: center;
+    z-index: 2;
+    width: 16.66%;
+  }
+  .timeline-item img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+  }
+
+  .timeline-item img:hover {
+    transform: scale(1.1);
+  }
+  .timeline-item .progress-step {
+    position: relative;
+    margin-top: 10px;
+    color: #666;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1.4;
+    word-wrap: break-word;
+  }
+
+  .progress-step:before {
+    content: attr(data-content);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%);
+  }
+
+  .timeline-progress {
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    height: 20px;
+    background-color: #4caf50; /* Progress color (green) */
+    z-index: 2;
+    transform: translateY(-50%);
+    width: 0%;
+    transition: width 0.3s ease;
+  }
+
+  /**
+  .timeline-item:first-child:before {
+    content: 'Submit Volunteer Registration Form';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%);
+    margin-top: 20px;
+  }
+
+  .timeline-item:nth-child(2):before {
+    content: 'To be reviewed by DPPAM Team';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%);
+    margin-top: 20px;
+  }
+  .timeline-item:nth-child(3):before {
+    content: 'Application Approved';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%);
+    margin-top: 20px;
+  }
+  .timeline-item:nth-child(4):before {
+    content: 'Submit Additional Requirements';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%);
+    margin-top: 20px;
+  }
+  .timeline-item:nth-child(5):before {
+    content: 'Orientation and Training';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%);
+    margin-top: 20px;
+  }
+  .timeline-item:nth-child(6):before {
+    content: 'Start Volunteering';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%);
+    margin-top: 20px;
+  }
+
+  **/

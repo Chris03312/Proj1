@@ -1,0 +1,156 @@
+/*START OF SIDEBAR STYLE*/
+/* Layout skeleton */
+.wrapper {
+    align-items: stretch;
+    display: flex;
+    width: 100%;
+}
+
+#sidebar {
+    position: fixed;
+    max-width: 300px;
+    min-width: 300px;
+    transition: all 0.35s ease-in-out;
+    z-index: 1111;
+    padding: 0 12px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    max-height: 100vh;
+
+}
+
+
+/* Sidebar collapse */
+
+#sidebar.collapsed {
+    margin-left: -300px;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100%;
+    transition: margin-left 0.35s ease-in-out; /* Sliding transition */
+    margin-left: 300px; /* Sidebar's width */
+}
+
+/* Main content when sidebar is collapsed */
+#sidebar.collapsed + .main {
+    margin-left: 0; /* Remove margin to allow content to slide */
+}
+
+a.nav-link,
+.help_desk {
+    padding: .625rem 1.625rem;
+    position: relative;
+    display: block;
+    font-size: 1rem;
+    text-decoration: none;
+}
+
+
+.nav-link[data-bs-toggle="collapse"]::after {
+    border: solid;
+    border-width: 0 .075rem .075rem 0;
+    content: "";
+    display: inline-block;
+    padding: 2px;
+    position: absolute;
+    right: 1.5rem;
+    top: 1.4rem;
+    transform: rotate(-135deg);
+    transition: all .2s ease-out;
+}
+
+.nav-link[data-bs-toggle="collapse"].collapsed::after {
+    transform: rotate(45deg);
+    transition: all .2s ease-out;
+}
+
+.content {
+    flex: 1;
+    max-width: 100vw;
+    width: 100vw;
+}
+
+.sidebar-nav {
+    padding: 0;
+}
+
+
+.nav-link[aria-current="page"]{
+    background-color: blue;
+    color: #ffffff !important;
+    border-radius: 5px;
+}
+
+.nav-link[aria-current="page"]:hover,
+.nav-link:hover {
+    background-color: blue;
+    color: #ffffff !important;
+    border-radius: 5px;
+}
+
+li {
+    list-style-type: none;
+}
+
+.notif-container {
+    width: 450px;
+    height: 70vh !important;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.sidebarLogo {
+    width: 100px;
+    margin-bottom: 36px;
+}
+
+/* Responsive */
+
+@media (min-width:768px) {
+    .content {
+        width: auto;
+    }
+}
+
+@media (max-width: 991.98px) {
+    #sidebar {
+        margin-left: -300px; /* Hide the sidebar */
+    }
+    #sidebar.collapsed {
+        margin-left: 0; /* Show the sidebar when collapsed class is toggled */
+    }
+    .main {
+        margin-left: 0; /* Adjust main content margin */
+    }
+}
+
+/* Sidebar default hidden on small screens */
+@media (max-width: 768px) {
+    #sidebar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 300px;
+        background-color: white; /* Adjust as needed */
+        margin-left: -300px; /* Hide by default */
+        z-index: 1111; /* Ensure it overlays content */
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    }
+
+    /* Show sidebar when 'collapsed' class is toggled */
+    #sidebar.collapsed {
+        margin-left: 0;
+    }
+
+    /* Darken the main content when sidebar is visible */
+    .content.overlay-active {
+        background-color: rgba(0, 0, 0, 0.5); /* Dim the background */
+    }
+}
+
+/**END OF SIDEBAR STYLE**/

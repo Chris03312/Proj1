@@ -1,0 +1,65 @@
+/**START OF MAIN CONTENT STYLE**/
+
+.dashboardBanner {
+    background: url('../img/DASHBOARD\ BANNER.png') center/cover no-repeat;
+    padding: 12px;
+    border-radius: 5px;
+    color: #ffffff;
+}
+
+.countdown {
+    background: url('../img/DASHBOARD\ BANNER.png') center/cover no-repeat;
+    border-radius: 5px;
+    color: #ffffff;
+}
+
+.announcementCountdown {
+    background: url('../img/CALENDAR.png') center/cover no-repeat;
+    padding: 32px;
+}
+
+
+/**TIMELINE STYLE**/
+.timeline-with-icons {
+    position: relative;
+    padding-left: 35px;
+  }
+  
+  .timeline-with-icons:before {
+    content: '';
+    position: absolute;
+    left: 25px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: hsl(217, 88.8%, 35.1%);
+  }
+  
+  .timeline-item {
+    position: relative;
+    margin-bottom: 40px;
+  }
+  
+  .timeline-item:last-child {
+    margin-bottom: 0;
+  }
+  
+  .timeline-year {
+    position: absolute;
+    left: -50px;
+    background-color: hsl(217, 88.2%, 90%);
+    color: hsl(217, 88.8%, 35.1%);
+    border-radius: 20px;
+    height: 30px;
+    width: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+  }
+  
+  .timeline-content {
+    margin-left: 50px;
+  }
+  
+  
